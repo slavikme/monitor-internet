@@ -1,46 +1,27 @@
-basic node boiler plate loaded with all the goodies you need to get up and running quickly!
+# Monitor Internet Connection
 
-# node-typescript-starter-boilerplate
-
-Basic node boiler plate loaded with all the goodies you need to get up and running quickly!
+This service is responsible for monitoring and handling received data.
 
 ## Features
 
- - Eslint to lint ( Includes prettier integration to auto-format code ) - https://eslint.org/blog/2019/01/future-typescript-eslint
- - `test` script with full Jest + TS support
- - `debug` script to use during development which provides auto restarting on changes ( using nodemon + ts-node )
- - `build` script to convert our typescript code to plain JavaScript for usage in a production environment
+ - Log internet speedtest results
+ - Monitor heartbeat segments
+ - Extract data using specified dates
 
-## Suggested VS code configuration
+## Todo
+#### API
+- Post (save) speed test results
+- Get collected data between provided dates
+- Post (store) heartbeat segment
 
-To make the most of the eslint setup mentioned above I suggest you open up your `settings.json` file and add the following code - it will allow vs code to auto-fix any problems + format on save
+#### Notifications
+- Push notification to notification service once defined
 
-```
- /**
-    ----- Linting configurations
-  */
-  // Prevent editor formatting on save for certain file types
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false,
-  },
-  "[typescript]": {
-    "editor.formatOnSave": false,
-  },
-  // Configure eslint to report + fix errors for correct file types
-  "editor.formatOnPaste": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    }
-  ],
-```
-
-Please feel free to open an issue with suggestions / an MR to contribute :).
+#### Configurations
+- DB Connection details
+- Speedtest server ids (from speedtest.net)
+- Notification service connection details
+- Notification heartbeat timeout (seconds)
+- Notification speedtest frequency (minutes)
+- 
+ 
